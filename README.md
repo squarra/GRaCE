@@ -1,3 +1,19 @@
+> [!NOTE]
+> I couldn't get it to run quite yet. Here are some notes
+
+- A cuda capable GPU is needed (Compiling Pointnet2_PyTorch needs it)
+- Don't use the conda environment, I've come further by using python3.12
+    - Use the most recent versions of all the libraries
+    - Especially if you run into the `libtorch.so` error, use a recent torch version
+- Can't use python3.13 yet, because open3d is not compiled for it
+- `graspflow-simulator` repo doesn't exist or is private, just comment it out in the `.gitmodules` file or init every module on it's own
+- 
+- Symlinking fixed the Eigen error for the franke module 
+
+```sh
+sudo ln -s /usr/include/eigen3/Eigen /usr/include/Eigen
+```
+
 # GRaCE
 
 ## Introduction
